@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ASCIInimation</title>
+    <link rel="stylesheet" href="ascii.css">
 </head>
 <body>
-    
+<div class="main_body">
+    <h1>ASCII Animation Viewer</h1>
+    <textarea name="animation" id="viewer" cols="80" rows="20"></textarea>
+<div id="controls">
+    <fieldset>
+        <legend>Play Controls:</legend>
+        <button>Start</button>
+        <button>Stop</button>
+    </fieldset>
+    <fieldset>
+        <legend>Animation</legend>
+        <select name="animation">
+            <option value="Excercize">Excercize</option>
+            <option value="Juggler">Juggler</option>
+            <option value="Bike">Bike</option>
+            <option value="Dive">Dive</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Size:</legend>
+        <select name="size">
+            <option value="tiny">Tiny</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extra_large">Extra Large</option>
+            <option value="xxl">XXL</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Speed:</legend>
+        <input type="checkbox" name="turbo" value="turbo">
+        <label for="turbo">Turbo</label>
+    </fieldset>
+</div>
+</div>
 </body>
 </html>
