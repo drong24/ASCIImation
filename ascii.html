@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCIInimation</title>
     <link rel="stylesheet" href="ascii.css">
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
 </head>
 <body>
 <div class="main_body">
@@ -14,13 +16,14 @@
 <div id="controls">
     <fieldset>
         <legend>Play Controls:</legend>
-        <button>Start</button>
-        <button>Stop</button>
+        <button id="start_button" onclick="start_timer()">Start</button>
+        <button id="stop_button" onclick="stop_timer()">Stop</button>
     </fieldset>
     <fieldset>
         <legend>Animation</legend>
-        <select name="animation">
-            <option value="Excercize">Excercize</option>
+        <select id="animation_list" name="animation" onchange="change_animation()">
+            <option value="Blank">Blank</option>
+            <option value="Exercise">Exercise</option>
             <option value="Juggler">Juggler</option>
             <option value="Bike">Bike</option>
             <option value="Dive">Dive</option>
@@ -28,19 +31,21 @@
     </fieldset>
     <fieldset>
         <legend>Size:</legend>
-        <select name="size">
-            <option value="tiny">Tiny</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="extra_large">Extra Large</option>
-            <option value="xxl">XXL</option>
+        <select id="size_list" name="size" onchange="change_text_size()">
+            <option value="7">Tiny</option>
+            <option value="10">Small</option>
+            <option selected="selected" value="12">Medium</option>
+            <option value="16">Large</option>
+            <option value="24">Extra Large</option>
+            <option value="32">XXL</option>
         </select>
     </fieldset>
     <fieldset>
         <legend>Speed:</legend>
-        <input type="checkbox" name="turbo" value="turbo">
-        <label for="turbo">Turbo</label>
+        <label>
+            <input type="checkbox" id="turbo_checkbox" onclick="change_speed()">
+            Turbo
+        </label>
     </fieldset>
 </div>
 </div>

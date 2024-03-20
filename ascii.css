@@ -11,8 +11,8 @@ h1 {
     font-size: 32pt;
 }
 
-input {
-    margin: 5px;
+button {
+    padding: 3px;
 }
 
 .main_body {
